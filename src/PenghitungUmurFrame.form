@@ -105,7 +105,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btnKeluar" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="jDateChooser1" max="32767" attributes="0"/>
+                      <Component id="dateChooserTanggalLahir" max="32767" attributes="0"/>
                       <Component id="txtUmur" max="32767" attributes="0"/>
                       <Component id="txtUlangTahunBerikutnya" min="-2" pref="204" max="-2" attributes="0"/>
                   </Group>
@@ -119,7 +119,7 @@
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="labelInput" min="-2" max="-2" attributes="0"/>
-                      <Component id="jDateChooser1" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="dateChooserTanggalLahir" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -175,7 +175,10 @@
             <Property name="text" type="java.lang.String" value="Ulang Tahun Berikutnya"/>
           </Properties>
         </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
+        <Component class="com.toedter.calendar.JDateChooser" name="dateChooserTanggalLahir">
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="dateChooserTanggalLahirPropertyChange"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtUmur">
         </Component>
@@ -191,6 +194,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Hitung Umur"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHitungUmurActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnKeluar">
           <Properties>
@@ -202,6 +208,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Keluar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKeluarActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
